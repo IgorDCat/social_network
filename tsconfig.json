@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "lib": ["es6", "dom"],
+    "rootDir": "src",
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noImplicitAny": false,
+    "strictNullChecks": false
+  },
+  "exclude": [
+    "node_modules",
+    "build"
+  ],
+  "include": ["src", "index.d.ts", "declaration.d.ts"
+  ]
+}

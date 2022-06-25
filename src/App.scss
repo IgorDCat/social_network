@@ -1,0 +1,488 @@
+.app_wrapper {
+    display: grid;
+    margin: 0 auto;
+    max-width: 1200px;
+    grid-template-rows: 63px 1fr 2fr;
+    grid-template-columns: 2fr 10fr;
+    grid-template-areas: 'h h' 'n c' 'n c';
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+@media (max-width: 992px){
+	.app_wrapper{
+		max-width: 900px;
+	}
+}
+
+header img {
+    width: 50px;
+    border-radius: 5px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 20fr 5fr;
+    grid-area: h;
+    background-color: rgb(62, 123, 238);
+    border: 6px solid rgb(62, 123, 238);
+    border-radius: 8px;
+}
+
+.social_netw_name {
+    padding: 10px;
+    color: aliceblue;
+    font-size: 25px;
+}
+
+.nav {
+    grid-area: n;
+    background-color: rgb(62, 123, 238);
+    border: 6px solid rgb(62, 123, 238);
+    font-size: 20px;
+    border-radius: 8px;
+    align-self: start;
+}
+
+.nav .nav_link {
+    padding: 10px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav .nav_link:hover {
+    background-color: rgb(33, 100, 226);
+    color: aliceblue;
+    border-radius: 5px;
+    cursor: pointer;
+    /*transform: scale(1.1);
+    transition-duration: 0.5s;*/
+}
+
+.content {
+    display: grid;
+    grid-area: c;
+    background-color: cornflowerblue;
+    border: 10px solid cornflowerblue;
+    border-radius: 8px;
+    grid-template-columns: 320px 1fr;
+    grid-template-areas: 'mi mi' 'avatar pi' 'posts posts' 'p-ar p-ar';
+    grid-row-gap: 5px;
+}
+
+.profile_info {
+    grid-area: pi;
+    padding-left: 20px;
+}
+
+.main_img_box {
+    grid-area: mi;
+}
+
+div img {
+    border-radius: 5px;
+}
+
+.posts {
+    grid-area: posts;
+}
+
+.posts {
+    background-color: rgb(62, 123, 238);
+    color: rgb(254, 254, 255);
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.posts textarea {
+    width: 99%;
+    resize: none;
+    border-radius: 10px;
+    background-color: floralwhite;
+}
+
+.posts button,
+.login_form_button {
+    background-color: rgb(62, 123, 238);
+    color: rgb(254, 254, 255);
+    padding: 5px 10px;
+    font-size: 17px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.profile_info #user_name {
+    font-size: 20px;
+}
+
+.post_area {
+    display: grid;
+    background-color: cornflowerblue;
+    border: 10px solid cornflowerblue;
+    border-radius: 8px;
+    grid-area: p-ar;
+}
+
+.post {
+    display: grid;
+    background-color: rgb(126, 167, 243);
+    color: black;
+    padding: 10px;
+    padding-top: 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    grid-template-rows: 40px 1fr;
+    grid-template-columns: 70px 1fr;
+    grid-template-areas: 'im tex' 'im lik'
+}
+
+.post img {
+    width: 50px;
+    border-radius: 100%;
+    grid-area: im;
+}
+
+.post textarea {
+    resize: none;
+    background-color: rgb(126, 167, 243);
+    grid-area: tex;
+    width: 90%;
+}
+
+.like {
+    grid-area: lik;
+}
+
+#like_button {
+    background-color: rgb(62, 123, 238);
+    color: rgb(254, 254, 255);
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-auto-rows: 4fr 1fr;
+    background-color: cornflowerblue;
+    padding: 10px;
+    border: 10px solid cornflowerblue;
+    border-radius: 8px;
+    text-decoration: none;
+    grid-area: c;
+    grid-template-areas: 'df dm' 'sm sm';
+    height: 800px;
+}
+
+.dialogs a {
+    text-decoration: none;
+    color: black;
+}
+
+.message_title {
+    display: flex;
+    align-content: space-between;
+    justify-content: flex-end;
+}
+
+.message_title .end {
+    margin-left: auto;
+    color: lightslategray;
+}
+
+.friends {
+    display: grid;
+    grid-area: df;
+    background-color: rgb(62, 123, 238);
+    border: 6px solid rgb(62, 123, 238);
+    font-size: 20px;
+    color: white;
+    border-radius: 8px;
+}
+
+.dialogImg {
+    width: 50px;
+    border-radius: 100%;
+    grid-area: dialogImg;
+}
+
+.dialog_friend, .dialog_friend_selected {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-auto-rows: 30px 70px;
+    grid-template-areas: 'dialogImg friend_name' 'dialogImg friend_info';
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.dialog_friend_selected {
+    background-color: rgb(41, 106, 229);
+
+}
+
+.dialog_friend:hover {
+    background-color: rgb(70, 125, 227);
+}
+
+.friend_info {
+    grid-area: friend_info;
+    font-size: 12px;
+}
+
+.friend_name {
+    grid-area: friend_name;
+
+}
+
+.dialogs_messages {
+    grid-template-columns: 1fr;
+    grid-area: dm;
+    height: 600px;
+    overflow-y: auto;
+}
+
+.dialogs_friends {
+    overflow-y: auto;
+}
+
+.dialog_message {
+    background-color: aliceblue;
+    border: 6px solid aliceblue;
+    border-radius: 8px;
+    width: 80%;
+    height: 50px;
+    margin: 10px 10px 10px 20px;
+    padding: 10px;
+}
+
+.deleteMessage:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.send_message {
+    grid-area: sm;
+    background-color: rgb(62, 123, 238);
+    color: rgb(254, 254, 255);
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    height: 100px;
+}
+
+.send_message textarea {
+    resize: none;
+    width: 90%;
+}
+
+.user_img {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+
+.selected_page_number {
+    color: white;
+    background-color: rgb(62, 123, 238);
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 5px 5px 5px 8px;
+}
+
+.non_selected_page_number {
+    cursor: pointer;
+    padding: 5px 5px 5px 8px;
+}
+
+.page_numbers {
+    padding: 10px;
+}
+
+.preloader_img {
+    width: 50px;
+    height: 50px;
+    z-index: 1000
+}
+
+.preloader {
+    z-index: 1000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.status {
+    cursor: pointer;
+}
+
+.status:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.login_header {
+    text-align: right;
+    vertical-align: middle;
+
+
+    font-size: 20px;
+    padding-right: 5px;
+}
+
+.login_header a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+
+.login_error {
+    color: red;
+    font-size: 12px;
+    background-color: black;
+}
+
+.success {
+    color: white;
+    background-color: green;
+    padding-left: 10px;
+}
+
+.login_fields input {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.login_form {
+    margin-left: 30%;
+    margin-top: 10px;
+}
+
+.hide_button {
+    display: none;
+}
+
+.no_active {
+    color: white;
+}
+
+.change_main_img {
+    opacity: revert;
+}
+
+.change_main_img:hover {
+    display: inline-block;
+}
+
+.avatar {
+    grid-area: avatar;
+    width: 300px;
+}
+
+.thumbs {
+    border-right: 20px;
+    grid-area: avatar;
+    width: 100%;
+    max-width: 300px; /* опционально */
+    margin: 10px;
+    opacity: .99;
+    overflow: hidden;
+    position: relative;
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.thumbs:before {
+    content: '';
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+    width: 100%;
+    height: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    -webkit-transition-property: top, opacity;
+    transition-property: top, opacity;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.thumbs img {
+    display: block;
+    width: 100%; /* ширина картинки */
+    height: auto; /* высота картинки */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.thumbs .caption {
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    text-align: center;
+}
+
+.thumbs .caption span {
+    display: block;
+    opacity: 0;
+    position: relative;
+    top: 100px;
+    -webkit-transition-property: top, opacity;
+    transition-property: top, opacity;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.thumbs .caption .title {
+    line-height: 1;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.thumbs .caption .info {
+    line-height: 1.2;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.thumbs:focus:before,
+.thumbs:focus span, .thumbs:hover:before,
+.thumbs:hover span {
+    opacity: 1;
+}
+
+.thumbs:focus:before, .thumbs:hover:before {
+    top: 50%;
+}
+
+.thumbs:focus span, .thumbs:hover span {
+    top: 0;
+}
+
+.thumbs:focus .title, .thumbs:hover .title {
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+}
+
+.thumbs:focus .info, .thumbs:hover .info {
+    -webkit-transition-delay: 0.25s;
+    transition-delay: 0.25s;
+}

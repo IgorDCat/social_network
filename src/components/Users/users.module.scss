@@ -1,0 +1,23 @@
+.title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.description {
+  padding-left: 20px;
+}
+
+.users {
+  display: flex;
+  margin: 10px;
+  border: aliceblue 2px solid;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: ghostwhite;
+  border-radius: 5px;
+}
+
+.user_img {
+  width: 80px;
+  height: 80px;
+}
